@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shawarma Empire</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Shawarma Empire</h1>
+    
+    <div id="main-game-area">
+        <div id="resource-area">
+            <h2>Shawarmas Collected: <span id="shawarma-count">0</span></h2>
+            <button id="shawarma-clicker" onclick="makeShawarma()">
+                <img src="shawarma.png" class="shawarma-button" alt="Shawarma">
+            </button>
+            <p>Click the shawarma to make more!</p>
+        </div>
+
+        <div id="building-area">
+            <h2>Upgrades</h2>
+
+            <div class="building-icon building-chef" onclick="buyBuilding('chef')">
+                <img src="chef.png" class="building-image" alt="Shawarma Chef">
+                <div class="building-info">
+                    <p>Chef</p>
+                    <p>Produces 5 shawarmas/sec</p>
+                    <p>Cost: <span id="chef-cost">100</span></p>
+                </div>
+            </div>
+
+            <div class="building-icon building-osmows" onclick="buyBuilding('osmows')">
+                <img src="osmows.png" class="building-image" alt="Osmow's Food Chain">
+                <div class="building-info">
+                    <p>Osmow's Food Chain</p>
+                    <p>Produces 20 shawarmas/sec</p>
+                    <p>Cost: <span id="osmows-cost">500</span></p>
+                </div>
+            </div>
+
+            <div class="building-icon building-lazeez" onclick="buyBuilding('lazeez')">
+                <img src="lazeez.png" class="building-image" alt="Lazeez Shawarma Food Chain">
+                <div class="building-info">
+                    <p>Lazeez Shawarma Food Chain</p>
+                    <p>Produces 50 shawarmas/sec</p>
+                    <p>Cost: <span id="lazeez-cost">1500</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
